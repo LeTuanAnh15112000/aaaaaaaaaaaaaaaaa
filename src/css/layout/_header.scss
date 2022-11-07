@@ -1,0 +1,202 @@
+.l-header {
+	background-color: $header-bg;
+	position: relative;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	&__inner {
+		width: 100%;
+		margin: 0 auto;
+	}
+	&__content {
+		display: flex;
+		align-items: center;
+		height: 120px;
+		justify-content: space-between;
+	}
+
+	&__logo{
+		width: 18.5%;
+		margin-left: 10%;
+		margin-right: 10%;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__contain{
+		display: flex;
+		justify-content: space-between;
+		width: 82.5%;
+	}
+	&__nav{
+		font-weight: bold;
+		width: 100%;
+		ul{
+			display: $flex;
+			width: 100%;
+			align-items: baseline;
+			height: 100%;
+			font-size:clamp(( 10px / $font-size) * 1rem, 1.5vw ,( 16px / $font-size) * 1rem);
+			li{
+				flex: 1;
+				height: 100%;
+				display: inline-flex;
+				width: 100%;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+	&__link{
+		text-align: center;
+		padding: 0 10px;
+		display: block;
+	}
+	&__contact{
+		display: $flex;
+		justify-content: space-between;
+		white-space: nowrap;
+		margin-right: 10%;
+		margin-left: 2%;
+		&--phone{
+			margin-right: 10%;
+			span{
+				&:first-child{
+					color: $blue;
+					font-size:clamp(( 14px / $font-size) * 1rem, 1.5vw ,( 18px / $font-size) * 1rem);
+				}
+				&:last-child{
+					color: $white;
+					background: $blue;
+					display: inline-flex;
+					align-items: center;
+					padding: 7px 10px;
+					border-radius: 25px;
+					font-size:clamp(( 12px / $font-size) * 1rem, 1.5vw ,( 16px / $font-size) * 1rem);
+				}
+			}
+		}
+		&--language{
+			color: $blue;
+			font-size:clamp(( 10px / $font-size) * 1rem, 1.5vw ,( 14px / $font-size) * 1rem);
+			div{
+				font-weight: bold;
+			}
+		}
+	}
+
+}
+// icon click open and close menu
+.l-menu__button {
+	display: none;
+	position: relative;
+	margin-left: auto;
+	z-index: 20;
+	margin: 5px 20px 0 0;
+}
+
+// active menu
+.is-click2{
+	display: none;
+}
+.l-header__menusp{
+	span{
+		margin-top: 20px;
+		font-size: $font18;
+		img{
+			margin-right: 10px;
+		}
+	}
+	p{
+		margin-top: 12px;
+		color: $blue;
+		span{
+			background: $red;
+			color: $white;
+			display: inline-block;
+			padding: 0 15px;
+			margin-left: 10px;
+		}
+	}
+}
+// Desktop + Tablet
+// --------------------------------------------------
+@include media-breakpoint-pc-tab12 {
+	.l-header {
+		&__nav {
+			display: block !important;
+		}
+		&__link{
+			padding: 0 2px;
+		}
+		&__logo{
+			margin-inline: 2%;
+		}
+		&__contact{
+			margin-inline: 2% 4%;
+		}
+	}
+}
+
+// Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+	.l-header {
+		&__nav {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			margin-top: 100px;
+			background-color: $white;
+			z-index: 10;
+			overflow: scroll;
+		}
+		&__logo{
+			margin-left: 5%;
+			margin-right: 9%;
+			padding-top: 25px;
+			height: 100%;
+			width: unset;
+			background:  #fff;
+			img{
+				width: 116px;
+			}
+		}
+		
+		&__content {
+			height: 80px;
+		}
+		&__nav{
+			ul{
+				display: block;
+				gap: 10px;
+				height: unset;
+				padding:  0 20px;
+				li{
+					display: inline-block;
+					position: relative;
+					width: 45%;
+					height: 100px;
+					&::after{
+						content: "";
+						position: absolute;
+						width: 18px;
+						height: 5px;
+						background: url("../../image/right.png");
+						right: 9px;
+    					bottom: 9px;
+					}
+				}
+			}
+		}
+	}
+
+	.l-menu__button {
+		display: block;
+	}
+}

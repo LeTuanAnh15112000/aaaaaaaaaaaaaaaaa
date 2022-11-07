@@ -1,0 +1,35 @@
+.l-inner {
+	margin: 0 auto;
+	padding: 0 $pd-x-pc;
+	width: $content-width;
+	max-width: 100%;
+	height: inherit;
+
+	&.--full {
+		width: 100%;
+		padding: 0;
+	}
+	//1790
+	&.--wide {
+		width:  $content-width--wide;
+	}
+	// 1140px
+	&.--narrow{
+		width:  $content-width--narrow;
+	}
+}
+
+.l-content {
+	padding-top: 150px;
+}
+.l-container{
+	width: 100%;
+	margin: 0 auto;
+}
+.l-container1{
+	max-width: 1920px;
+	width: 96%;
+	margin: 0 auto;
+}
+
+

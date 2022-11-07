@@ -1,0 +1,11 @@
+.p-yoru {
+    margin-top: 118px;
+}
+.p-tabs{
+    margin-top: 80px;
+    .l-container{
+        @include media-breakpoint-sp{
+            width: 92%;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+				</article>
+				<!-- /.<%= getArticleClass('.'); %> -->
+			</main>
+			<!-- /#primary -->
+		</div>
+		<!-- /#content -->
+		<footer class="l-footer">
+			<div class="l-footer__contain">
+				<div class="l-footer__logo u-center">
+					<img src="<%= getRelativePath('/images/index/logo_footer.png'); %>" alt="">
+				</div>
+				<div class="u-center">
+					<span class="c-btn --white"><img src="<%= getRelativePath('/images/index/phone_footer.png'); %>" alt="お知らせ一覧">(092)551-4126</span>
+					<span class="c-btn --white"><img src="<%= getRelativePath('/images/index/mail_footer.png'); %>" alt="お知らせ一覧">(092)551-4126</span>
+				</div>
+				<div class="l-footer__info">
+					<address class="l-footer__infoContact">
+						T811-1344 <br class="u-only__sp">福岡県福岡市南区三宅3丁目19番7号<br>
+						<span class="c-text1 --bold"></span>営業時間</span> | 10：00～22：00（21:30受付終了）<br>
+						<span class="c-text1 --bold"></span>定休日</span> | 毎週火曜日 <br class="u-only__sp">（16時～22時までは温泉入浴のみ営業）<br>
+						<span class="c-text1 --bold"></span>TEL</span> | <a href="tel: 0925514126" target="_blank" rel="noopener noreferrer">(092)551-4126</a> <br>
+						<span class="c-text1 --bold"></span>FAX</span> | <a href="tel: 0925518445" target="_blank" rel="noopener noreferrer">(092)551-8445</a> <br>
+						<span class="c-text1 --bold"></span>E-MAIL</span> | <a href="mailto: info@fujinoen.co.jp" target="_blank" rel="noopener noreferrer">info@fujinoen.co.jp</a>
+					</address>
+					<div class="l-footer__infoMenu">
+						<ul>
+							<li><a href="">HOME</a></li>
+							<li><a href="">お知らせ</a></li>
+							<li><a href="">施設案内</a></li>
+							<li><a href="">宿泊</a></li>
+							<li><a href="">温泉</a><a href=""></a></li>
+							<li><a href="">お食事</a></li>
+							<li><a href="">周辺観光</a></li>
+							<li><a href="">アクセス</a></li>
+							<li><a href="">お問い合わせ</a></li>
+							<li><a href="">個人情報保護方針</a> <span class="c-btnNew">PDF</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="l-footer__coppy u-center">
+					© FUJINOEN All Rights Reserved
+				</div>
+			</div>
+		</footer>
+		<!-- /#footer -->
+	</div>
+	<!-- /#all -->
+
+	<script src="<%= getRelativePath('/js/jquery-1.11.0.min.js'); %>"></script>
+	<script src="<%= getRelativePath('/js/script.js'); %>"></script>
+	<% if(getPageId() == 'index') { %>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="<%= getRelativePath('/js/index.js'); %>"></script>
+	<% } %>
+	<!-- font -->
+	<script>
+	(function(d) {
+		var config = {
+		kitId: 'mxm7xbk',
+		scriptTimeout: 3000,
+		async: true
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+	</script>
+</body>
+</html>

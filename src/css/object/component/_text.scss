@@ -1,0 +1,19 @@
+.c-text1 {
+    font-size: ( 16px / $font-size) * 1rem;
+    font-weight: 500;
+    &.--center {
+        text-align: center;
+    }
+    &.--bold {
+        font-weight: 700;
+    }
+    &.--white{
+        color: #fff;
+    }
+    &--fs1{
+        font-size: ( 14px / $font-size) * 1rem;
+    }
+    &--fs2{
+        font-size: ( 18px / $font-size) * 1rem;
+    }
+}

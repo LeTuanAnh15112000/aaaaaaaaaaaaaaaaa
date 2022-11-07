@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title><%= getHeadPageTitle(); %></title>
+	<meta name="description" content="<%= getDescription(); %>">
+	<meta property="og:locale" content="ja_JP">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="<%= getSiteUrl(); %>">
+	<meta property="og:title" content="<%= getSiteTitle(); %>">
+	<meta property="og:description" content="<%= getDescription(); %>">
+	<meta property="og:image" content="<%= getSiteUrl(); %>/ogp.jpg">
+	<meta property="og:site_name" content="<%= getSiteTitle(); %>">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no,email=no,address=no">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="shortcut icon" href="<%= getRelativePath('/favicon.ico'); %>">
+	<link rel="apple-touch-icon" href="<%= getRelativePath('/apple-touch-icon.png'); %>">
+	<link rel="stylesheet" href="<%= getRelativePath('/css/slick.css'); %>">
+	<link rel="stylesheet" href="<%= getRelativePath('/style.css'); %>">
+	<!-- preload -->
+	<link rel="preload" href="<%= getRelativePath('/images/index/img_mainvisual01.jpg'); %>" as="image">
+</head>
+<body class="<%= getBodyClass(); %>">
+	<div id="all">
+		<header class="l-header">
+			<div class="l-header__inner">
+				<div class="l-header__content">
+					<div class="l-header__logo">
+						<h1><a href="<%= getRelativePath('/'); %>"><img src="<%= getRelativePath('/images/index/fujinoen.png'); %>" alt="fujinoen"></a></h1>
+					</div>
+					<div class="l-header__contain">
+						<nav class="l-header__nav">
+							<ul class="l-header__list">
+								<li class="l-header__item">
+									<a class="l-header__link" href="<%= getRelativePath('/'); %>">
+										<img src="<%= getRelativePath('/image/home.png'); %>" alt="home"><br>
+										<span>HOME</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a class="l-header__link" href="<%= getRelativePath('/'); %>">
+										<img src="<%= getRelativePath('/image/information.png'); %>" alt="施設案内"><br>
+										<span>施設案内</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a class="l-header__link" href="<%= getRelativePath('/'); %>">
+										<img src="<%= getRelativePath('/image/Lodging.png'); %>" alt="宿泊"><br>
+										<span>宿泊</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a class="l-header__link" href="<%= getRelativePath('/'); %>">
+										<img src="<%= getRelativePath('/image/spring.png'); %>" alt="温泉"><br>
+										<span>温泉</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a class="l-header__link" href="<%= getRelativePath('/'); %>">
+										<img src="<%= getRelativePath('/image/meal.png'); %>" alt="お食事"><br>
+										<span>お食事</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a class="l-header__link" href="<%= getRelativePath('/'); %>">
+										<img src="<%= getRelativePath('/image/sightseeing.png'); %>" alt="周辺観光"><br>
+										<span>周辺観光</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a class="l-header__link" href="<%= getRelativePath('/'); %>">
+										<img src="<%= getRelativePath('/image/access.png'); %>" alt="アクセス"><br>
+										<span>アクセス</span>
+									</a>
+								</li>
+							</ul>
+							<div class="l-header__menusp u-only__sp u-center">
+								<span class="c-btn"><img src="<%= getRelativePath('/image/phone.png'); %>" alt="phone">(092)551-4126</span><br>
+								<span class="c-btn"><img src="<%= getRelativePath('/image/mail.png'); %>" alt="mail">お問い合わせ</span>
+								<p class="c-text16">営業時間 10：00～22：00</p>
+								<p class="c-text14">個人情報保護方針 <span>PDF</span></p>
+								<p class="c-text14">© FUJINOEN All Rights Reserved</p>
+							</div>
+						</nav>
+						<div class="l-header__contact">
+							<div class="l-header__contact--phone u-only__pc">
+								<span>
+									<img src="<%= getRelativePath('/image/phone.png'); %>" alt="phone">(092)551-4126
+								</span><br>
+								<span>
+									<img src="<%= getRelativePath('/image/mail.png'); %>" alt="mail">お問い合わせ
+								</span>
+							</div>
+							<div class="l-header__contact--language">
+								<p class="u-only__pc">
+									<span>営業時間</span><br>
+									<span>10：00～22：00</span>
+								</p>
+								<div>
+									<span>日本語</span>/
+									<span>English</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="l-menu__button">
+						<img src="<%= getRelativePath('/image/icon_close.png'); %>" alt="icon close menu" class="is-click1">
+						<img src="<%= getRelativePath('/image/icon_open.png'); %>" alt="icon open menu" class="is-click2">
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- /#header -->
+		<div class="l-content <% if (getPageId() != 'index') { %>u-padding<% } %> ">
+			<main class="l-primary"><% if (getPageId() == 'index') { %>
+				<div class="c-mainvisual">
+					<div class="c-mainvisual">
+						<div class="c-mainvisual__item js-mainslick">
+							<div class="slick-slide" style="background-image: url(<%= getRelativePath('/image/manvisual1.jpg'); %>);">
+								<div class="c-mainvisual__content u-center">
+									<div class="c-mainvisual__content--contain">
+										<p>本物の温泉好きの方へ。</p>
+										<p>源泉完全かけ流し</p>
+									</div>
+									<div class="c-mainvisual__content--text u-center">
+										Free-flowing hot spring. <br>
+									For those who love real hot springs.
+									</div>
+								</div>
+							</div>
+							<div class="slick-slide" style="background-image: url(<%= getRelativePath('/image/manvisual2.jpg'); %>);">
+								<div class="c-mainvisual__content u-center">
+									<div class="c-mainvisual__content--contain">
+										<p>日帰りからご宿泊まで。</p>
+										<p>おひとり様から団体様、</p>
+									</div>
+									<div class="c-mainvisual__content--text u-center">
+										From individuals to groups,<br>
+									From day trips to overnight stays.
+									</div>
+								</div>
+							</div>
+							<div class="slick-slide" style="background-image: url(<%= getRelativePath('/image/manvisual3.jpg'); %>);">
+								<div class="c-mainvisual__content u-center">
+									<div class="c-mainvisual__content--contain">
+										<p>本物の温泉好きの方へ。</p>
+										<p>源泉完全かけ流し</p>
+									</div>
+									<div class="c-mainvisual__content--text u-center">
+										Free-flowing hot spring. <br>
+									For those who love real hot springs.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><% } %>
+				<article class="<%= getArticleClass(); %>">
+<!-- 
+					<li class="u-icon u-none">
+						<a href="<%= getRelativePath('/'); %>"><img src="<%= getRelativePath('/image/telegram.png'); %>" alt="telegram"></a><br>
+						<a href="<%= getRelativePath('/'); %>"><img src="<%= getRelativePath('/image/facebook.png'); %>" alt="facebook"></a>
+					</li> -->
